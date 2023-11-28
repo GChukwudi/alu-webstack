@@ -39,7 +39,7 @@ frontend  gchukwudi_frontend
         default_backend gchukwudi_backend
 
 frontend  gchukwudi_front
-        bind *:443 ssl crt /etc/letsencrypt/live/www.gchukwudi.tech/fullchain.pem
+        bind *:443 ssl crt /etc/letsencrypt/archive/www.gchukwudi.tech/www.gchukwudi.tech.pem
         http-request add-header X-Forwarded-Proto https
         acl letsencrypt-acl path_beg /.well-known/acme-challenge/
         use_backend letsencrypt-backend if letsencrypt-acl
